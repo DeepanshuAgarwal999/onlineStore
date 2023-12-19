@@ -47,32 +47,30 @@ const Product = () => {
         <h1 className="text-4xl font-semibold text-white text-center pt-10">
           {product.title}
         </h1>
-        <div className="flex lg:flex-row flex-col justify-around px-4 gap-6 items-center h-[100vh] ">
+        <div className="flex lg:flex-row flex-col justify-around px-4 mt-10 gap-6 items-center min-h-screen">
           {/* left section */}
-          <div className="h-auto z-20 lg:w-[50%] w-full">
-            <div className="flex items-center gap-5 text-white h-full">
-              <button
-                className="py-3 px-4 bg-slate-600 rounded-lg hover:text-slate-500 duration-150 font-semibold"
-                onClick={handlePrevClick}
-              >
-                Prev
-              </button>
-              <img
-                src={`https://i.dummyjson.com/data/products/${product.id}/${imgId}.jpg`}
-                alt=""
-                className="w-full h-full rounded-lg"
-              />
-              <button
-                className="py-3 px-4 bg-slate-600 rounded-lg hover:text-slate-500 duration-150 font-semibold"
-                onClick={handleNextClick}
-              >
-                Next
-              </button>
-            </div>
+          <div className="flex items-center gap-5 justify-center text-white h-full z-20 lg:w-[50%] ">
+            <button
+              className="py-3 px-4 bg-slate-600 rounded-lg hover:text-slate-500 duration-150 font-semibold"
+              onClick={handlePrevClick}
+            >
+              Prev
+            </button>
+            <img
+              src={`https://i.dummyjson.com/data/products/${product.id}/${imgId}.jpg`}
+              alt=""
+              className="w-[70%] rounded-lg"
+            />
+            <button
+              className="py-3 px-4 bg-slate-600 rounded-lg hover:text-slate-500 duration-150 font-semibold"
+              onClick={handleNextClick}
+            >
+              Next
+            </button>
           </div>
 
           {/* right section */}
-          <div className="flex flex-col items-center gap-5 text-white lg:w-[40%] w-full z-10  border-l border-white/20">
+          <div className="flex flex-col items-center gap-5 text-white lg:w-[40%] w-[60%] z-10  border-l border-white/20">
             <h1 className="text-2xl font-semibold">{product.title}</h1>
             <h1 className="text-xl">
               <span className="text-[#A1A1AA]">Brand </span> - {product.brand}
