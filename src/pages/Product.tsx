@@ -57,7 +57,7 @@ const Product = () => {
               Prev
             </button>
 
-            <div className="w-[70%] max-sm:h-[300px] h-[380px] lg:h-[450px]">
+            <div className="w-[70%] max-sm:h-[250px] h-[380px] lg:h-[450px]">
               <img
                 src={`https://i.dummyjson.com/data/products/${product.id}/${imgId}.jpg`}
                 alt=""
@@ -73,12 +73,12 @@ const Product = () => {
           </div>
 
           {/* right section */}
-          <div className="flex flex-col items-center gap-5 text-white lg:w-[40%] w-[60%] z-10  border-l border-white/20">
+          <div className="flex flex-col items-center gap-5 px-3 text-white lg:w-[40%] sm:w-[60%] max-sm:w-full z-10  border-l border-white/20">
             <h1 className="text-2xl font-semibold">{product.title}</h1>
             <h1 className="text-xl">
               <span className="text-[#A1A1AA]">Brand </span> - {product.brand}
             </h1>
-            <h1 className="text-xl text-white">
+            <h1 className="text-xl text-white whitespace-nowrap">
               <span className="text-[#A1A1AA]">Category </span> -{" "}
               {product.category}
             </h1>
