@@ -56,11 +56,14 @@ const Product = () => {
             >
               Prev
             </button>
-            <img
-              src={`https://i.dummyjson.com/data/products/${product.id}/${imgId}.jpg`}
-              alt=""
-              className="w-[70%] rounded-lg"
-            />
+
+            <div className="w-[70%] max-sm:h-[300px] h-[380px] lg:h-[450px]">
+              <img
+                src={`https://i.dummyjson.com/data/products/${product.id}/${imgId}.jpg`}
+                alt=""
+                className="w-full h-full rounded-lg"
+              />
+            </div>
             <button
               className="py-3 px-4 bg-slate-600 rounded-lg hover:text-slate-500 duration-150 font-semibold"
               onClick={handleNextClick}
@@ -89,7 +92,7 @@ const Product = () => {
             <h1 className="text-xl text-white">
               <span className="text-[#A1A1AA]">Stock</span> - {product.stock}
             </h1>
-            <p className="text-sm text-white bg-[#18181b] w-[60%] py-4 px-5 rounded-lg tracking-wider">
+            <p className="text-sm text-white bg-[#18181b] max-sm:w-full w-[60%] py-4 px-5 rounded-lg tracking-wider">
               <span className="text-left text-[#A1A1AA] text-lg py-2 block">
                 Description
               </span>
